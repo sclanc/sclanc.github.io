@@ -1,0 +1,24 @@
+.web-title-box {
+    position: absolute;
+    margin-top: 12%;
+}
+.sub-title-text {
+    font-size: 30px;
+}
+.title-text {
+   font-size: 80px;
+}
+.row {
+    margin-bottom: 0px;
+}
+
+.courthack {
+    height: 60%;
+    width: 80%;
+    margin: 0 auto;
+    z-index: 2;
+} 
+.iconsstyle {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
