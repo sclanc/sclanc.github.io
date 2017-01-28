@@ -1,3 +1,7 @@
-.hov:hover {
-    cursor: pointer;
+.hov {
+    margin-left: 20px;
+}
+
+.max {
+    max-width:400px;
 }
