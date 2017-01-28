@@ -9,7 +9,7 @@
   <nav>
     <div class="nav-wrapper indigo darken-1">
       <ul class="left hide-on-med-and-down">
-      <li><a href="html/home.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="html/projects.html">Projects</a></li>
       <li><a href="html/coming-soon.html">Resume</a></li>
       <li><a href="html/coming-soon.html">Services</a></li>
@@ -27,17 +27,17 @@
           <div class="white-text valign center-align col s4 offset-s4 web-title-box">
               <h1> Sean Clancy</h1>
               <h2 class="flow-text"> Angular  |  Python  |  C++</h2>
-              <h2> <i class="fa fa-angle-double-down" aria-hidden="true"></i></h2>
+              <h2> <i onclick="scrollToAnchor('see')" class="fa fa-angle-double-down lol" aria-hidden="true"></i></h2>
           </div>
           <img class="img-style" src="images/Background1.png" width="100%">
       </div>
     </div>
-      <div class="section blue-grey darken-4">
+      <div id="see" class="section blue-grey darken-4 ">
         <div  class="row container">
           <h1 class="header white-text">Web Developer</h1>
           <p  class="grey-text white-text lighten-3"> Over 1 year of full-stack web development experience with Angular 1.5-2, Java Script, HTML, CSS/Less, Java-Jersy, Oracle SQL and exposure to other development frameworks. </p>
-          <a class="waves-effect waves-light btn">See my projects</a>
-          <a class="waves-effect waves-light btn">Need work done?</a>
+          <a class="waves-effect waves-light btn" href="html/projects.html">See my projects</a>
+          <a class="waves-effect waves-light btn" href="html/comming-soon.html">Need work done?</a>
         </div>
       </div>
       <div class="parallax-container">
@@ -82,6 +82,10 @@
           $(document).ready(function(){
             $('.parallax').parallax();
           }); 
+          function scrollToAnchor(aid){
+            var aTag = $("div[id='"+ aid +"']");
+            $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+        }
       </script>
     </main>
     <footer class="page-footer indigo darken-1">

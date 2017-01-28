@@ -22,3 +22,7 @@
     margin-right: 20px;
     margin-bottom: 20px;
 }
+
+.lol:hover {
+    cursor: pointer;
+}
