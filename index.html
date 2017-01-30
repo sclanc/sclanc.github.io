@@ -14,7 +14,7 @@
       <li><a href="html/coming-soon.html">Resume</a></li>
       <li><a href="html/coming-soon.html">Services</a></li>
       <li><a href="html/coming-soon.html">Blog</a></li>
-      <li><a href="html/coming-soon.html">Contact</a></li>
+      <li><a href="html/contact.html">Contact</a></li>
     </ul>
   </div>
   </nav>
@@ -37,7 +37,7 @@
           <h1 class="header white-text">Web Developer</h1>
           <p  class="grey-text white-text lighten-3"> Over 1 year of full-stack web development experience with Angular 1.5-2, Java Script, HTML, CSS/Less, Java-Jersy, Oracle SQL and exposure to other development frameworks. </p>
           <a class="waves-effect waves-light btn" href="html/projects.html">See my projects</a>
-          <a class="waves-effect waves-light btn" href="html/comming-soon.html">Need work done?</a>
+          <a class="waves-effect waves-light btn" href="html/contact.html">Need work done?</a>
         </div>
       </div>
       <div class="parallax-container">
@@ -47,7 +47,7 @@
         <div  class="row container">
           <h2 class="header white-text">Volunteer</h2>
           <p  class="grey-text white-text lighten-3">I love to help! Does your charitable organization need a web-application or site changed or built?</p>
-          <a class="waves-effect waves-light btn">Get help here</a>
+          <a class="waves-effect waves-light btn" href="html/contact.html">Get help here</a>
         </div>
       </div>
         <div class="parallax-container">
@@ -57,7 +57,7 @@
         <div  class="row container">
           <h2 class="header white-text">Student</h2>
           <p  class="grey-text white-text lighten-3"> I study CS at Utah Valley University. Check out some of my student projects on GitHub and BitBucket.</p>
-          <a class="waves-effect waves-light btn">Check 'em out</a>
+          <a class="waves-effect waves-light btn" onclick="scrollToAnchor('down')">Check 'em out</a>
         </div>
       </div>
       <div class="parallax-container">
@@ -67,8 +67,8 @@
         <div  class="row container">
           <h2 class="header white-text">Self-Starter</h2>
           <p  class="grey-text white-text lighten-3">The Proof is in the code.</p>
-          <a class="waves-effect waves-light btn">See my projects</a>
-          <a class="waves-effect waves-light btn">Read my blog</a>
+          <a class="waves-effect waves-light btn" href="html/projects.html">See my projects</a>
+          <a class="waves-effect waves-light btn" href="html/comming-soon.html">Read my blog</a>
         </div>
       </div>
       <div class="blue-grey darken-3">
@@ -83,13 +83,19 @@
             $('.parallax').parallax();
           }); 
           function scrollToAnchor(aid){
-            var aTag = $("div[id='"+ aid +"']");
-            $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+            if(aid == "down") {
+              var aTag = $("div[id='"+ aid +"']");
+              $('html,body').animate({scrollTop: aTag.offset().top},1100,'swing');
+            }
+            else {
+              var aTag = $("div[id='"+ aid +"']");
+              $('html,body').animate({scrollTop: aTag.offset().top},"slow",'swing');
+            }
         }
       </script>
     </main>
     <footer class="page-footer indigo darken-1">
-      <div class="container">
+      <div id="down" class=" container">
         <div class="row">
           <div class="center">
             <a target="_blank" href="https://www.facebook.com/seantheshield">
