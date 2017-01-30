@@ -1,0 +1,109 @@
+
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>
+            Model
+        </h1>
+        <p> 
+            Each game object will have the following properties:
+        </p>
+        <ul>
+            <li>
+                board: a two dimentional Java Script array of a user specified size used to keep track of player positions.
+            </li>
+            <li>
+                boardCheck: a two dimentional Java Script array of a user specified size used to keep track of recursion in checkBoard().
+            </li>
+            <li>
+                player1: player one's score.
+            </li>
+            <li>
+                player2: player two's score.
+            </li>
+            <li>
+                p1resign: a bool indicating whether or not player one has chosen to resign.
+            </li>
+            <li>
+                p2resign: a bool indicating whether or not player two has chosen to resign.
+            </li>
+            <li>
+                turn: a bool indicating whose turn it is (0 for p1, 1 for p2).
+            </li>
+        </ul>
+        <h2> 
+            Sample game state (ideal for display on 13x13 board)
+        </h2>
+        <pre>
+hardCodedGamestate = {"board":[[1,2,1,1,0,0,0,0,0,0,0,0,0],
+                               [0,0,1,0,0,0,0,0,0,0,0,0,0],
+                               [2,0,0,0,0,0,0,0,0,0,0,0,0],
+                               [2,0,0,0,0,0,0,0,0,0,0,0,0],
+                               [0,0,1,0,0,0,0,0,0,0,0,0,0],
+                               [0,0,0,0,0,0,0,0,0,0,0,0,0],
+                               [0,0,0,0,0,1,2,0,0,0,0,0,0],
+                               [0,0,0,0,0,2,1,0,0,0,0,0,0],
+                               [0,0,0,0,0,0,0,0,0,0,0,0,0],
+                               [0,0,0,0,0,0,0,0,0,0,0,0,0],
+                               [0,0,0,0,0,0,0,0,0,0,0,0,0],
+                               [0,0,0,0,0,0,0,0,0,0,0,0,0],
+                               [0,0,0,0,0,0,0,0,0,0,0,0,0]],
+
+                  "boardCheck":[[false,false,false,false,false,false,false,false,false,false,false,false,false],
+                               [false,false,false,false,false,false,false,false,false,false,false,false,false],
+                               [false,false,false,false,false,false,false,false,false,false,false,false,false],
+                               [false,false,false,false,false,false,false,false,false,false,false,false,false],
+                               [false,false,false,false,false,false,false,false,false,false,false,false,false],
+                               [false,false,false,false,false,false,false,false,false,false,false,false,false],
+                               [false,false,false,false,false,false,false,false,false,false,false,false,false],
+                               [false,false,false,false,false,false,false,false,false,false,false,false,false],
+                               [false,false,false,false,false,false,false,false,false,false,false,false,false],
+                               [false,false,false,false,false,false,false,false,false,false,false,false,false],
+                               [false,false,false,false,false,false,false,false,false,false,false,false,false],
+                               [false,false,false,false,false,false,false,false,false,false,false,false,false],
+                               [false,false,false,false,false,false,false,false,false,false,false,false,false]],
+                               "player1": 0,
+                               "player2": 0,
+                               "p1resign": false,
+                               "p2resign": false,
+                               "turn": true,}
+        </pre>
+        <h2>
+            Functions
+        </h2>
+        <ul>
+            <li>initGame() receives message from index.html, calls the createBoard() function, and creates the HTML table for the game while also initializing the 
+                gameState </li>
+            <li>
+                createBoard() creates canvas object that acts as the visible board. 
+            </li>
+            <li>
+                turn() receives board position and updates the gamestate accordingly, changing the turn bool, and calling the following functions: 
+                    <ul>
+                        <li>
+                             insertGamePeice() inserts game peice into the DOM that is either white or black, depending on whose turn it is.
+                        </li>
+                        <li>
+                            checkBoard() recursivly checks each intersection of the board, to make sure that any pieces that are in place are not entrapped.
+                            awards points as neccicary and calls the remove peice function as needed
+                        </li>
+                        <li>
+                            removePeice() receives coordinates and removes game peice accordingly.
+                        </li>
+                    </ul>
+            </li>
+            <li>
+                resign() recieves player, changes the value of coresponding player resign to true 
+            </li>
+            <li>
+                resetResign() resets a player's resign to false, if the other player did not resign
+            </li>
+            <li>
+                endGame() if both players have resigned final scores are calculated and the game resets.
+            </li>
+        </ul>
+    </body>
+</html>
+
+

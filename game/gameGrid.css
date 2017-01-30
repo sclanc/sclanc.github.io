@@ -1,0 +1,38 @@
+
+
+table, tbody {
+    max-width: 60vw;
+    max-height: 60vh;
+}
+ td {
+    width: 80px;
+    height: 80px;
+}
+.grid {
+    margin-top: 10vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    table-layout: fixed;
+    border-collapse: collapse;
+   border: 1px solid black;
+  
+}
+
+.play {
+
+    position: absolute;
+    table-layout: fixed;
+    margin-left: 22vw;
+    margin-top: -117vh;
+    z-index: 2;
+    border-collapse: collapse; 
+}
+
+.derp {    
+   /*border: 1px solid red; this is for seeing the play table in order to make adjustments*/
+}
+
+.stone {
+    padding-top: 25%;
+     padding-left: 35%;
+}

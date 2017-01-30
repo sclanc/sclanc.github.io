@@ -1,0 +1,35 @@
+   <ul>
+            <li> Done ~ initGame() receives message from index.html, calls the createBoard() function, and creates the HTML table for the game while also initializing the 
+                gameState </li>
+            <li>
+               Done ~ createBoard() creates canvas object that acts as the visible board. 
+            </li>
+            <li>
+               Almost Done ~  turn() receives board position and updates the gamestate accordingly, changing the turn bool, and calling the following functions: 
+                    <ul>
+                        <li>
+                            Done ~ insertGamePeice() inserts game peice into the DOM that is either white or black, depending on whose turn it is.
+                        </li>
+                        <li>
+                            checkBoard() recursivly checks each intersection of the board, to make sure that any pieces that are in place are not entrapped.
+                            awards points as neccicary and calls the remove peice function as needed
+                        </li>
+                        <li>
+                            removePeice() receives coordinates and removes game peice accordingly.
+                        </li>
+                    </ul>
+            </li>
+            <li>
+                resign() recieves player, changes the value of coresponding player resign to true 
+            </li>
+            <li>
+                resetResign() resets a player's resign to false, if the other player did not resign
+            </li>
+            <li>
+                endGame() if both players have resigned final scores are calculated and the game resets.
+            </li>
+        </ul>
+
+
+        More than 25% of the game logic has been completed in that you can visably interact with all of the peices that are placed on the board, turns alternate automatically
+        and the game state is being dynamically modified according to user input. I have been trying to implement the game logic as I completed the labs.

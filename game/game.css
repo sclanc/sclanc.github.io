@@ -1,0 +1,73 @@
+#board {
+    position: absolute;
+    z-index: -1;
+}
+
+#invsiboard {
+    padding-left: 25px;
+    padding-top: 25px;
+    z-index: 2;
+    float: left;
+}
+
+.invsibutton {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    background: transparent;
+    border: none !important;
+}
+
+.invsibutton:hover {
+    cursor: pointer;
+}
+
+.invsibutton:focus {
+    outline: none;
+}
+
+.settings {
+    padding-left: 25px;
+    padding-top: 25px;
+}
+
+
+.play {
+    background-color:#78c3fb; 
+    border: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+}
+
+.reset {
+    float: left;
+}
+
+.resign {
+    margin-left: 20px;
+    display: inline;
+}
+
+.gameOp {
+    margin-top: 20px;
+}
+
+a {
+     text-decoration: none;
+     color: black;
+}
+
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: green;
+}
+
+#name {
+    top:10%;
+    right:30%;
+    position: fixed;
+    font-size: 20px;
+}

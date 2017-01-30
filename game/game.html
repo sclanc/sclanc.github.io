@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <header>
+          <link rel="stylesheet" type="text/css" href="game.css">
+          <script src="game.js"></script>
+    </header>
+    <body>
+        <div id="board">
+        </div>
+        <div id= "invsiboard">
+        </div>
+        <div class="settings">
+            <div class="coordinates">
+                <h3>
+                    Last Move:
+                </h3>
+                <p id="coord">
+                    Make a move!
+                </p>
+            </div>
+            <div class="players" id="players">
+                <h3>
+                    Choose Player Names:
+                </h3>
+                <div id="form">
+                    Player 1: <br>
+                    <input type="text" id="p1"> <br>
+                    Player 2: <br>
+                    <input type="text" id="p2"> <br>
+                    <br><br>
+                    <input type="button" value="Create Scoreboard" onclick="inputPlayers()">
+                </div>
+            </div>
+            <div id="scoreBoard">
+            </div>
+            <div class="gameOp">
+                <div class="reset"> 
+                    <button class="play" onclick="reset()"> Reset </button>
+                </div>
+                <div class="resign">
+                    <button class="play" onclick="resign()"> Resign </button>
+                </div>
+                <div class="resign">
+                    <button class="play"> <a href="index.html">Return to Home</a> </button>
+                </div>
+                <div class="changeBoard">
+                    <select onchange="initGame(this)">
+                        <option value=""> Reset and Change Board Size </option>
+                        <option value="5">5x5</option>
+                        <option value="7">7x7</option>
+                        <option value="9">9x9</option>
+                        <option value="13">13x13</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id="name">
+            <button onclick="localStorage.clear()"> Clear Storage </button>
+            <button onclick="importSavedGame()"> Import Saved Game </button>
+        </div>
+    </body>
+</html>

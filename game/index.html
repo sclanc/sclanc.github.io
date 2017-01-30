@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+    <header>
+          <link rel="stylesheet" type="text/css" href="index.css">
+          <script src="index.js"></script>
+    </header>
+    <body>
+       <div> 
+            <h1>
+                Go!
+            </h1>
+            <div style="float: right;">
+                    <button onclick="validatePassword()">
+                        Log in
+                    </button> 
+                    Username: <input id="name" type="text" name="name"/>
+                    Password: <input id="password" type="password" name="pw"/>
+                </div>
+        </div>
+        <div class="description">
+            <p>
+                The Ancient Chinese encircling game, known commonly in english as Go, is the oldest, game in the world that is still played today. Despite its simple rules 
+                and objective, it's one of the most complex and intricate two player games ever made. the objective of the game is to surround more territory than the opponent 
+                using game pieces called stones. The game ends when neither player wishes to continue. A more detailed explaination of the game, it's rules, and strategies can 
+                be found 
+                <a target="_blank" href="https://en.wikipedia.org/wiki/Go_(game)">here.</a>
+            </p>
+         </div>
+         <div class="imgg"> 
+             <div class="shift">
+                <img src="Go_board.jpg" height="400px" width="400px">
+                <div class="credits">
+                        By <a href="//commons.wikimedia.org/wiki/User:Dilaudid" title="User:Dilaudid">Dilaudid</a> - Own work; modified from <a href="//commons.wikimedia.org/wiki/File:Go_board.jpg" title="File:Go board.jpg">Image:Go_board.jpg</a>, which was made by <a href="//commons.wikimedia.org/wiki/User:Donarreiskoffer" title="User:Donarreiskoffer">user:donarreiskoffer</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=765289">https://commons.wikimedia.org/w/index.php?curid=765289</a>
+                </div>
+             </div>
+            </div>
+        <div class="buffer">
+            <button class="play">
+                <a class="adiff" href="#openModal">
+                    Play!
+                </a>
+            </button>
+            <button class="play">
+                <a class="adiff" href="documentation.html">
+                    See Software Documentation
+                </a>
+            </button>
+        </div>
+        <div class="state">
+            <h2>
+                Sample Game State:
+            </h2>
+            <p>
+                 The game grid will be represented by a 2 dimentional JavaScript array. 
+                 The 2 dimentional array will be filled with numbers; 0 for unoccupied, 1 for player 1, 2 for player 2. 
+                 Java Script functions will modify this data according to the rules of the game. 
+                 Each player's score will be stored as seperate variables 
+                 a boolean will keep track of whose turn it is 
+                 A boolean will keep track of whether or not the game is over 
+            </p> 
+            <pre>
+                gameState = {"board":[[0,0,0,0,0,0,0,0,0,0,0,0,0],
+                                      [0,0,0,0,0,0,0,0,0,0,0,0,0],
+                                      [0,0,0,0,0,0,0,0,0,0,0,0,0],
+                                      [0,0,0,0,0,0,0,0,0,0,0,0,0],
+                                      [0,0,0,0,0,0,0,0,0,0,0,0,0],
+                                      [0,0,0,0,0,0,0,0,0,0,0,0,0],
+                                      [0,0,0,0,0,1,2,0,0,0,0,0,0],
+                                      [0,0,0,0,0,2,1,0,0,0,0,0,0],
+                                      [0,0,0,0,0,0,0,0,0,0,0,0,0],
+                                      [0,0,0,0,0,0,0,0,0,0,0,0,0],
+                                      [0,0,0,0,0,0,0,0,0,0,0,0,0],
+                                      [0,0,0,0,0,0,0,0,0,0,0,0,0],
+                                      [0,0,0,0,0,0,0,0,0,0,0,0,0]]
+                             "player1": 0,
+                             "player2": 0,
+                             "turn": true,
+                             "gameEnd": false}
+            </pre>
+            <p>
+                Note: a sample of a game in progress may be found by pressing the play button, the sample game seen also in gameGrid.html is built on the board that will 
+                be used for actual gameplay in future assignments. I did my best to make that board responsive to different screen sizes, but more work may need to be done.
+                Because the game of Go is played by placing stones on the intersection of lines on the game board, there are two HTML tables used for this board, one has a 
+                black 1px border to outline the 13x13 playing grid, the seccond is layered on top of the original in such a way that stones may be placed at the intersection
+                of gridlines in the original grid.
+            </p>
+        </div>
+    </body>
+
+    <div id="openModal" class="modalDialog">
+        <div class="sizes">
+        <h1> Choose Board Size </h1>
+        <div class="boardpick">
+        <button class="pick" onclick="createGrid(5)">5x5</button>
+        </div>
+        <div class="boardpick">
+        <button class="pick" onclick="createGrid(7)">7x7</button>
+        </div>
+        <div class="boardpick">
+        <button class="pick" onclick="createGrid(9)">9x9</button>
+        </div>
+        <div class="boardpick">
+        <button class="pick" onclick="createGrid(13)">13x13</button>
+        </div>
+        <a href="#close" title="Close" class="close">X</a>
+        </div>
+    </div>
+</html>
