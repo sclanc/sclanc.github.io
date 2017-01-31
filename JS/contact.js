@@ -1,4 +1,10 @@
 'use strict';
+
+setTimeout(function warn() {
+  Materialize.toast('Thanks for wanting reaching out, this page still has some kniks, so for now please send me an email at clancy.seanr@gmail.com.', 40000, 'rounded');
+},1000)
+
+
 $( ".input-field" ).keyup(function() {
   var form = $( ".white-text" );
   var ready = 0;
@@ -14,7 +20,6 @@ $( ".input-field" ).keyup(function() {
     $( "#sub" ).addClass("scale-out");
   }
 });
-
 
 function start() {
   // 2. Initialize the JavaScript client library.
